@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Test One</title>
+    <!-- Title is removed to trigger lint error -->
   </head>
   <body>
     <h1>Hello from CircleCI</h1>
-
-    <!-- Broken on purpose: invalid nesting -->
-    <a href="https://example.com">
-      <div>This is bad nesting and will fail</div>
-    </a>
-
-    <!-- Unknown tag: editor won't fix it -->
-    <fake-tag>This tag doesn't exist</fake-tag>
   </body>
 </html>
