@@ -1,0 +1,10 @@
+{
+  "name": "test-one",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "htmlhint index.html"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4"
+  }
+}

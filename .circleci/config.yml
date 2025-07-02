@@ -1,23 +1,20 @@
 version: 2.1
 
 jobs:
-  build:
+  html_lint:
     docker:
       - image: cimg/node:18.20.2
     steps:
       - checkout
       - run:
-          name: Check if HTML exists
-          command: |
-            if [ -f index.html ]; then
-              echo "index.html found!"
-            else
-              echo "index.html not found!"
-              exit 1
-            fi
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Run HTML Linter
+          command: npm run lint
 
 workflows:
   version: 2
-  build_and_test:
+  validate_html:
     jobs:
-      - build
+      - html_lint
